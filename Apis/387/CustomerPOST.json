@@ -3,7 +3,7 @@
   "Description": "Creates a new record of type Customer",
   "HttpMethod": "POST",
   "IsEnabled": true,
-  "OrderIndex": 21,
+  "OrderIndex": 22,
   "CrossDomainPolicy": "PortalAliasesOnly",
   "Inputs": [
     {
@@ -76,6 +76,15 @@
       "Parameters": {},
       "InputTypeStr": "text",
       "Validations": []
+    },
+    {
+      "Name": "Address",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 7,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
     }
   ],
   "Actions": [
@@ -90,7 +99,8 @@
         "Email": "[Email]",
         "Phone": "[Phone]",
         "YearFounded": "[YearFounded]",
-        "Type": "[Type]"
+        "Type": "[Type]",
+        "Address": "[Address]"
       },
       "IsEnabled": true,
       "ExecutionType": "OnExecute",
@@ -150,6 +160,10 @@
           {
             "name": "Type",
             "value": "[CreatedRecord:Type]"
+          },
+          {
+            "name": "Address",
+            "value": "[CreatedRecord:Address]"
           }
         ],
         "Headers": [
