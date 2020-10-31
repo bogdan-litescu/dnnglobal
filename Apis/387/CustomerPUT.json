@@ -3,7 +3,7 @@
   "Description": "Updates the information of the provided Customer record",
   "HttpMethod": "PUT",
   "IsEnabled": true,
-  "OrderIndex": 23,
+  "OrderIndex": 24,
   "CrossDomainPolicy": "PortalAliasesOnly",
   "Inputs": [
     {
@@ -93,6 +93,15 @@
       "Parameters": {},
       "InputTypeStr": "text",
       "Validations": []
+    },
+    {
+      "Name": "Address",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 8,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
     }
   ],
   "Actions": [
@@ -107,7 +116,8 @@
         "Email": "[Email]",
         "Phone": "[Phone]",
         "YearFounded": "[YearFounded]",
-        "Type": "[Type]"
+        "Type": "[Type]",
+        "Address": "[Address]"
       },
       "IsEnabled": true,
       "ExecutionType": "OnExecute",
