@@ -3,7 +3,7 @@
   "Description": "Returns the information of a Customer record in JSON object format.",
   "HttpMethod": "GET",
   "IsEnabled": true,
-  "OrderIndex": 22,
+  "OrderIndex": 23,
   "CrossDomainPolicy": "PortalAliasesOnly",
   "Inputs": [
     {
@@ -76,6 +76,10 @@
           {
             "name": "Type",
             "value": "[Record:Type]"
+          },
+          {
+            "name": "Address",
+            "value": "[Record:Address]"
           }
         ],
         "Headers": []
