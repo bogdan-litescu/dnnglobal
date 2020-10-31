@@ -1,0 +1,98 @@
+{
+  "Name": "Customer1",
+  "Description": "Creates a new record of type Customer",
+  "HttpMethod": "POST",
+  "IsEnabled": true,
+  "OrderIndex": 21,
+  "CrossDomainPolicy": "PortalAliasesOnly",
+  "Inputs": [],
+  "Actions": [
+    {
+      "ActionType": "PlantAnApp.CreateEntity.0.Customer",
+      "OrderIndex": 0,
+      "Parameters": {
+        "OutputToken": "CreatedRecordId",
+        "Name": "[Name]",
+        "DateSigned": "[DateSigned]",
+        "Value": "[Value]",
+        "Email": "[Email]",
+        "Phone": "[Phone]",
+        "YearFounded": "[YearFounded]",
+        "Type": "[Type]"
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {
+        "PAP_InternalIdentifier": "Api.CreateEntity",
+        "EntityIdentifier": "Customer"
+      }
+    },
+    {
+      "ActionType": "PlantAnApp.ReadEntity.0.Customer",
+      "OrderIndex": 1,
+      "Parameters": {
+        "RecordId": "[CreatedRecordId]",
+        "OutputToken": "CreatedRecord"
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {
+        "PAP_InternalIdentifier": "Api.ReadEntity",
+        "EntityIdentifier": "Customer"
+      }
+    },
+    {
+      "ActionType": "JsonObject",
+      "OrderIndex": 2,
+      "Parameters": {
+        "HttpCode": "201 Created",
+        "Fields": [
+          {
+            "name": "Id",
+            "value": "[CreatedRecordId]"
+          },
+          {
+            "name": "Name",
+            "value": "[CreatedRecord:Name]"
+          },
+          {
+            "name": "DateSigned",
+            "value": "[CreatedRecord:DateSigned]"
+          },
+          {
+            "name": "Value",
+            "value": "[CreatedRecord:Value]"
+          },
+          {
+            "name": "Email",
+            "value": "[CreatedRecord:Email]"
+          },
+          {
+            "name": "Phone",
+            "value": "[CreatedRecord:Phone]"
+          },
+          {
+            "name": "YearFounded",
+            "value": "[CreatedRecord:YearFounded]"
+          },
+          {
+            "name": "Type",
+            "value": "[CreatedRecord:Type]"
+          }
+        ],
+        "Headers": [
+          {
+            "name": "Location",
+            "value": "http://plantanapp-dnnglobal2.apps.plantanapp.com/api/Customer?recordId=[CreatedRecordId]"
+          }
+        ]
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {
+        "PAP_InternalIdentifier": "Api.Response"
+      }
+    }
+  ],
+  "OnErrorActions": []
+}
