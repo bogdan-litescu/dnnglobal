@@ -3,7 +3,7 @@
   "Description": "Deletes the provided Customer record",
   "HttpMethod": "DELETE",
   "IsEnabled": true,
-  "OrderIndex": 24,
+  "OrderIndex": 25,
   "CrossDomainPolicy": "PortalAliasesOnly",
   "Inputs": [
     {
