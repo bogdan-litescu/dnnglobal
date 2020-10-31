@@ -2,15 +2,14 @@
   "id": 1,
   "namespace": {
     "id": 1,
-    "portalId": 0,
     "name": "My"
   },
   "name": "NewToken",
   "description": "",
   "parser": "<parser><type>string</type><replace>false</replace><decodeHtml>false</decodeHtml></parser>",
   "defaultValue": "",
-  "cacheTime": 0,
-  "cacheLayer": "Global",
+  "cacheTime": 3600,
+  "cacheLayer": "User",
   "src": {
     "language": "csharp",
     "additionalAssemblies": "",
