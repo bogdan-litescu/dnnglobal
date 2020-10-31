@@ -1,0 +1,11 @@
+{
+  "DisplayInMenu": true,
+  "ParentPageId": -1,
+  "RecordNamePropertyId": 19,
+  "Id": 8,
+  "VersionId": 8,
+  "Name": "Customer Type",
+  "PluralName": "Customer Types",
+  "Icon": "table",
+  "Type": "UserCreated"
+}
