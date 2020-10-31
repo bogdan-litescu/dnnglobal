@@ -1,0 +1,11 @@
+{
+  "DisplayInMenu": true,
+  "ParentPageId": -1,
+  "RecordNamePropertyId": 17,
+  "Id": 7,
+  "VersionId": 7,
+  "Name": "Contact",
+  "PluralName": "Contacts",
+  "Icon": "table",
+  "Type": "UserCreated"
+}
